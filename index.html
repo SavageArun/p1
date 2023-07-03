@@ -912,7 +912,56 @@ var wpcf7_recaptcha = {"sitekey":"6LddnpIlAAAAAA5rx6Jw8Y-kDwqSGpOi98ZImI0Z","act
 			<script>
 			/(trident|msie)/i.test(navigator.userAgent)&&document.getElementById&&window.addEventListener&&window.addEventListener("hashchange",function(){var t,e=location.hash.substring(1);/^[A-z0-9_-]+$/.test(e)&&(t=document.getElementById(e))&&(/^(?:a|select|input|button|textarea)$/i.test(t.tagName)||(t.tabIndex=-1),t.focus())},!1);
 			</script>
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>WhatsApp Chat Join Button</title>
+    <style>
+        .whatsapp-button {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 45px;
+            height: 45px;
+            border-radius: 60%;
+            background-color: #25D366;
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            z-index: 999;
+            box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.25);
+        }
+
+        .whatsapp-button img {
+            width: 40px;
+            height: 40px;
+        }
+    </style>
+</head>
+<body>
+    <h1></h1>
+    
+    <a class="whatsapp-button" id="whatsapp-link">
+        <img src="https://mobirise.com/extensions/chat-button/assets/images/whatspp-1076x1076.png" alt="WhatsApp Chat" />
+    </a>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            var whatsappLink = document.getElementById("whatsapp-link");
+            whatsappLink.addEventListener("click", function() {
+                var phoneNumber = "+918510062945"; // 
+                var message = "Hello Devloper!"; // 
+                var encodedMessage = encodeURIComponent(message);
+                var url = "https://api.whatsapp.com/send?phone=" + phoneNumber + "&text=" + encodedMessage;
+                window.open(url, "_blank");
+            });
+        });
+    </script>
+</body>
+</html>
+
 				</body>
 </html>
 
-<!-- This website is like a Rocket, isn't it? Performance optimized by WP Rocket. Learn more: https://SavageArun - Debug: Savage@host -->
+<!-- This website is like a Rocket, is't it? Performance optimized by WP Rocket. Learn more /SavageArun - Debug: Savage@host -->
